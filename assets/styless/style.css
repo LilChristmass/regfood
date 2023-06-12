@@ -1,0 +1,69 @@
+/* Header styling start */
+:root {
+  --orange: #ff7c08;
+  --red: #eb0029;
+  --gray: #484747;
+  --black: #231f40;
+  --White: #ffffff;
+}
+header{
+  padding-top: 10px;
+}
+.logo-wrapper{
+  width: 256px;
+}
+nav ul li a{
+  color: var(--black);
+  transition: 0.3s;
+}
+nav ul li :hover > a{
+  color: var(--orange);
+}
+nav ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav ul li:hover{
+  border-bottom: 2px solid var(--orange);
+}
+.dropdown{
+  position: absolute;
+  top: 120%;
+  width: 250px;
+  opacity: 0;
+  transition: 0.3s;
+  border-radius: 10px;
+  max-height: 500px;
+  overflow-y: scroll;
+  
+}
+nav ul li:hover .dropdown{
+  opacity: 1;
+  top: 100%;
+}
+.dropdown a{
+  padding: 5px 20px;
+  border-radius: 10px;
+  position: absolute;
+}
+.dropdown a:not(:last-child){
+  border-bottom: 1px solid var(--gray);
+}
+.dropdown a :hover{
+  color: var(--orange);
+  padding-left: 30px;
+}
+.dropdown a ::after{
+  content: ;
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--orange);
+  left: 5px;
+  top: 55%;
+  transform: translateY(-50%);
+  opacity: 0;
+}
+
+/* Header styling end */
